@@ -6,6 +6,7 @@
       <label for="userType">User Type:</label>
       <select id="userType" v-model="userType" class="usertype-input-field">
         <option value="teacher">Teacher</option>
+        <option value="facilitator">Facilitator</option>
         <option value="student">Student</option>
       </select>
     </div>
@@ -66,7 +67,7 @@ export default {
         // });
 
         if (response.status === 200) {
-          this.$router.push('/success');
+          this.$router.push('/modules');
         }
         else {
           // this.$router.push('/error');

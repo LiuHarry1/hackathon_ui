@@ -1,7 +1,8 @@
 // router.js
 
 import { createRouter, createWebHistory } from 'vue-router';
-
+import ModuleList from './views/ModuleList.vue'
+import AssessmentPage from './views/AssessmentPage.vue'
 
 const routes = [
     {
@@ -15,6 +16,16 @@ const routes = [
     {
         path: '/empty-page',
         component: () => import('./components/EmptyPage.vue'),
+    },
+    {
+        path: '/modules',
+        name: 'modules',
+        component: ModuleList
+    },
+    {
+        path: '/assessment',
+        name: 'assessment',
+        component: AssessmentPage,
     },
     { path: '/success',
         component: () => import('./components/EmptyPage.vue'),
